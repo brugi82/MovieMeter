@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMeter.Model", "MovieMeter.Model\MovieMeter.Model.csproj", "{F5C9BA07-851A-44CE-AE2C-7723272D6EBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMeter.Data", "MovieMeter.Data\MovieMeter.Data.csproj", "{6371FED8-3F31-4DEF-8A4B-7A90A16BEAD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMeter.Repository", "MovieMeter.Repository\MovieMeter.Repository.csproj", "{8F2D4713-6838-4BB6-BCFA-A2E4D918BCD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMeter.API", "MovieMeter.API\MovieMeter.API.csproj", "{F612EA27-5749-4823-AA23-C2C99C9EA2FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5C9BA07-851A-44CE-AE2C-7723272D6EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C9BA07-851A-44CE-AE2C-7723272D6EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C9BA07-851A-44CE-AE2C-7723272D6EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C9BA07-851A-44CE-AE2C-7723272D6EBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6371FED8-3F31-4DEF-8A4B-7A90A16BEAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6371FED8-3F31-4DEF-8A4B-7A90A16BEAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6371FED8-3F31-4DEF-8A4B-7A90A16BEAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6371FED8-3F31-4DEF-8A4B-7A90A16BEAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F2D4713-6838-4BB6-BCFA-A2E4D918BCD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F2D4713-6838-4BB6-BCFA-A2E4D918BCD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F2D4713-6838-4BB6-BCFA-A2E4D918BCD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F2D4713-6838-4BB6-BCFA-A2E4D918BCD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F612EA27-5749-4823-AA23-C2C99C9EA2FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F612EA27-5749-4823-AA23-C2C99C9EA2FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F612EA27-5749-4823-AA23-C2C99C9EA2FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F612EA27-5749-4823-AA23-C2C99C9EA2FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
