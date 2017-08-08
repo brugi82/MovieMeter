@@ -16,3 +16,21 @@ C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.Re
 C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.Repository\bin\Debug\MovieMeter.Model.dll
 C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.Repository\bin\Debug\MovieMeter.Data.pdb
 C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.Repository\bin\Debug\MovieMeter.Model.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\MovieMeter.Repository.dll.config
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\MovieMeter.Repository.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\MovieMeter.Repository.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\AutoMapper.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\EntityFramework.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\MovieMeter.Data.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\MovieMeter.Model.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\SimpleInjector.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\MovieMeter.Data.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\MovieMeter.Model.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\AutoMapper.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\EntityFramework.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\SimpleInjector.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\obj\Debug\MovieMeter.Repository.csprojResolveAssemblyReference.cache
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\obj\Debug\MovieMeter.Repository.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\obj\Debug\MovieMeter.Repository.pdb

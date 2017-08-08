@@ -1,0 +1,8 @@
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\bin\Debug\MovieMeter.Test.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\bin\Debug\MovieMeter.Test.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\obj\Debug\MovieMeter.Test.csprojResolveAssemblyReference.cache
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\obj\Debug\MovieMeter.Test.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\obj\Debug\MovieMeter.Test.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\bin\Debug\MovieMeter.WebHarvester.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\bin\Debug\MovieMeter.WebHarvester.pdb

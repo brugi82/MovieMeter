@@ -11,3 +11,17 @@ C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.Da
 C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.Data\bin\Debug\SimpleInjector.xml
 C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.Data\obj\Debug\MovieMeter.Data.Migrations.InitialCreate.resources
 C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.Data\obj\Debug\MovieMeter.Data.csproj.GenerateResource.Cache
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\bin\Debug\MovieMeter.Data.dll.config
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\bin\Debug\MovieMeter.Data.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\bin\Debug\MovieMeter.Data.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\bin\Debug\EntityFramework.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\bin\Debug\SimpleInjector.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\bin\Debug\EntityFramework.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\bin\Debug\SimpleInjector.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\obj\Debug\MovieMeter.Data.csprojResolveAssemblyReference.cache
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\obj\Debug\MovieMeter.Data.Migrations.InitialCreate.resources
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\obj\Debug\MovieMeter.Data.csproj.GenerateResource.Cache
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\obj\Debug\MovieMeter.Data.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\obj\Debug\MovieMeter.Data.pdb

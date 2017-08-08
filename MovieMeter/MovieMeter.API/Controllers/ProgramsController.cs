@@ -31,5 +31,20 @@ namespace MovieMeter.API.Controllers
                 return InternalServerError();
             }
         }
+
+        [HttpPost]
+        public async Task<IHttpActionResult> Post()
+        {
+            try
+            {
+
+
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
+        }
     }
 }

@@ -1,0 +1,4 @@
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\MovieMeter.WebHarvester.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\MovieMeter.WebHarvester.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\obj\Debug\MovieMeter.WebHarvester.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\obj\Debug\MovieMeter.WebHarvester.pdb

@@ -2,3 +2,8 @@ C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.Mo
 C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.Model\bin\Debug\MovieMeter.Model.pdb
 C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.Model\obj\Debug\MovieMeter.Model.dll
 C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.Model\obj\Debug\MovieMeter.Model.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Model\bin\Debug\MovieMeter.Model.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Model\bin\Debug\MovieMeter.Model.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Model\obj\Debug\MovieMeter.Model.csprojResolveAssemblyReference.cache
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Model\obj\Debug\MovieMeter.Model.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Model\obj\Debug\MovieMeter.Model.pdb

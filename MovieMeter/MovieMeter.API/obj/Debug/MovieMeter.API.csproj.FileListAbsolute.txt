@@ -42,3 +42,47 @@ C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.AP
 C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.API\bin\MovieMeter.Repository.pdb
 C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.API\bin\AutoMapper.xml
 C:\Users\rr254611\Documents\Visual Studio 2015\Projects\MovieMeter\MovieMeter.API\bin\MovieMeter.Data.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\roslyn\csc.exe
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\roslyn\vbc.exe
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\roslyn\VBCSCompiler.exe
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.API.dll.config
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.API.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.API.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\EntityFramework.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\EntityFramework.SqlServer.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.Model.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.Repository.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\Newtonsoft.Json.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\SimpleInjector.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\SimpleInjector.Integration.WebApi.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\System.Net.Http.Formatting.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\System.Web.Http.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\System.Web.Http.WebHost.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.Data.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\AutoMapper.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.Model.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.Repository.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\EntityFramework.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\EntityFramework.SqlServer.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\SimpleInjector.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\SimpleInjector.Integration.WebApi.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\Newtonsoft.Json.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\System.Net.Http.Formatting.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\System.Web.Http.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\System.Web.Http.WebHost.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.Data.pdb
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\AutoMapper.xml
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\obj\Debug\MovieMeter.API.csprojResolveAssemblyReference.cache
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\obj\Debug\MovieMeter.API.dll
+C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\obj\Debug\MovieMeter.API.pdb
