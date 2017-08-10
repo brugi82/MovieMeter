@@ -8,6 +8,8 @@ using MovieMeter.Model;
 using MovieMeter.Data.Context;
 using AutoMapper;
 using System.Data.Entity;
+using MovieMeter.WebHarvester.Harvester;
+using MovieMeter.WebHarvester.Parsers;
 
 namespace MovieMeter.Repository.Repositories
 {
@@ -28,6 +30,26 @@ namespace MovieMeter.Repository.Repositories
             var programs = query.Select(elem => _mapper.Map<Program>(elem)).ToList();
 
             return programs;
+        }
+
+        public async Task HarvestMovieData()
+        {
+            await Task.Run(() =>
+            {
+                using (var loader = HarvesterFactory.GetSeleniumLoader())
+                {
+                    var programs = new List<IProgramInfo>();
+
+                    var pages = loader.GetProgramPagesHtml();
+                    var parser = ParserFactory.GetParser(loader);
+
+                    foreach (var page in pages)
+                    {
+                        programs.Add(parser.Parse(page));
+                    }
+                }
+            });
+            
         }
     }
 }

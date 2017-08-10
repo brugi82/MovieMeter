@@ -38,7 +38,7 @@ namespace MovieMeter.API.Controllers
             try
             {
 
-
+                await _repository.HarvestMovieData();
                 return Ok();
             }
             catch (Exception)

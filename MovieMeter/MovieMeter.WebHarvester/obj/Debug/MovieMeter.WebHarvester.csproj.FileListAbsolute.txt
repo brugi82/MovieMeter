@@ -2,3 +2,17 @@ C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin
 C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\MovieMeter.WebHarvester.pdb
 C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\obj\Debug\MovieMeter.WebHarvester.dll
 C:\Users\rr254611\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\obj\Debug\MovieMeter.WebHarvester.pdb
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\obj\Debug\MovieMeter.WebHarvester.dll
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\obj\Debug\MovieMeter.WebHarvester.pdb
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\MovieMeter.WebHarvester.dll
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\MovieMeter.WebHarvester.pdb
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\WebDriver.dll
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\WebDriver.xml
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\obj\Debug\MovieMeter.WebHarvester.csprojResolveAssemblyReference.cache
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\MovieMeter.Model.dll
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\MovieMeter.Model.pdb
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\WebDriver.Support.dll
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\WebDriver.Support.xml

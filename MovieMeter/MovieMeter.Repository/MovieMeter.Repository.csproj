@@ -80,6 +80,10 @@
       <Project>{f5c9ba07-851a-44ce-ae2c-7723272d6ebe}</Project>
       <Name>MovieMeter.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MovieMeter.WebHarvester\MovieMeter.WebHarvester.csproj">
+      <Project>{e754f9d2-8189-4393-bbd4-99fe3c0feecb}</Project>
+      <Name>MovieMeter.WebHarvester</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

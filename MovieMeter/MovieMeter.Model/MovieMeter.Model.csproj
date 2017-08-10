@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IProgramInfo.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramInfo.cs" />
     <Compile Include="ProgramType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
