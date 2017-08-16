@@ -141,3 +141,5 @@ C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\HtmlAgility
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\HtmlAgilityPack.xml
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\WebDriver.Support.dll
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\WebDriver.Support.xml
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.Service.dll
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.Service.pdb

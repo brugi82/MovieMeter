@@ -1,4 +1,4 @@
-﻿using MovieMeter.Repository.Contracts;
+﻿using MovieMeter.Model.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +11,11 @@ namespace MovieMeter.API.Controllers
     [Route("api/v1/Programs")]
     public class ProgramsController : ApiController
     {
-        private IMovieMeterRepository _repository;
+        private IMovieMeterService _service;
 
-        public ProgramsController(IMovieMeterRepository repository)
+        public ProgramsController(IMovieMeterService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         [HttpGet]
@@ -23,7 +23,7 @@ namespace MovieMeter.API.Controllers
         {
             try
             {
-                var result = await _repository.GetAllPrograms();
+                var result = await _service.GetAllPrograms();
                 return Ok(result);
             }
             catch (Exception)
@@ -38,7 +38,7 @@ namespace MovieMeter.API.Controllers
             try
             {
 
-                await _repository.HarvestMovieData();
+                await _service.HarvestMovieData();
                 return Ok();
             }
             catch (Exception)

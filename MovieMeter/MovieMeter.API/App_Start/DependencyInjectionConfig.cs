@@ -1,5 +1,5 @@
 ﻿using MovieMeter.API.DependencyInjection;
-using MovieMeter.Repository.DependencyInjection;
+using MovieMeter.Service.DependencyInjection;
 using SimpleInjector;
 using SimpleInjector.Integration.WebApi;
 using System;
@@ -18,7 +18,7 @@ namespace MovieMeter.API.App_Start
             var container = new Container();
 
             container.RegisterWebApis();
-            container.RegisterRepositories();
+            container.RegisterService();
 
             config.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(container);
         }

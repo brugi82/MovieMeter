@@ -16,3 +16,5 @@ C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\De
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\HtmlAgilityPack.xml
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\WebDriver.Support.dll
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\WebDriver.Support.xml
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\SimpleInjector.dll
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.WebHarvester\bin\Debug\SimpleInjector.xml

@@ -10,6 +10,5 @@ namespace MovieMeter.Repository.Contracts
     public interface IMovieMeterRepository
     {
         Task<List<Program>> GetAllPrograms();
-        Task HarvestMovieData();
     }
 }

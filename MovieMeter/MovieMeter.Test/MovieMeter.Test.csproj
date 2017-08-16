@@ -51,9 +51,24 @@
   </Choose>
   <ItemGroup>
     <Compile Include="InterpreterTests.cs" />
+    <Compile Include="Mocks\MovieMeterRepositoryMock.cs" />
+    <Compile Include="Mocks\ProgramProviderMock.cs" />
+    <Compile Include="MovieMeterServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MovieMeter.Model\MovieMeter.Model.csproj">
+      <Project>{F5C9BA07-851A-44CE-AE2C-7723272D6EBE}</Project>
+      <Name>MovieMeter.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieMeter.Repository\MovieMeter.Repository.csproj">
+      <Project>{8F2D4713-6838-4BB6-BCFA-A2E4D918BCD8}</Project>
+      <Name>MovieMeter.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieMeter.Service\MovieMeter.Service.csproj">
+      <Project>{CB5A75B6-D0C9-46EE-BC2C-1DB90ECB673E}</Project>
+      <Name>MovieMeter.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MovieMeter.WebHarvester\MovieMeter.WebHarvester.csproj">
       <Project>{E754F9D2-8189-4393-BBD4-99FE3C0FEECB}</Project>
       <Name>MovieMeter.WebHarvester</Name>

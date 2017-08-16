@@ -128,9 +128,9 @@
       <Project>{f5c9ba07-851a-44ce-ae2c-7723272d6ebe}</Project>
       <Name>MovieMeter.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MovieMeter.Repository\MovieMeter.Repository.csproj">
-      <Project>{8f2d4713-6838-4bb6-bcfa-a2e4d918bcd8}</Project>
-      <Name>MovieMeter.Repository</Name>
+    <ProjectReference Include="..\MovieMeter.Service\MovieMeter.Service.csproj">
+      <Project>{cb5a75b6-d0c9-46ee-bc2c-1db90ecb673e}</Project>
+      <Name>MovieMeter.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IMovieMeterService.cs" />
+    <Compile Include="Contracts\IProgramProvider.cs" />
     <Compile Include="IProgramInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProgramInfo.cs" />

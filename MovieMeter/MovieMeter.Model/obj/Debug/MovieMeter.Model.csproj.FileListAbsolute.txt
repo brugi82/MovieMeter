@@ -11,3 +11,4 @@ C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Model\bin\Debug\Mov
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Model\bin\Debug\MovieMeter.Model.pdb
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Model\obj\Debug\MovieMeter.Model.dll
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Model\obj\Debug\MovieMeter.Model.pdb
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Model\obj\Debug\MovieMeter.Model.csprojResolveAssemblyReference.cache
