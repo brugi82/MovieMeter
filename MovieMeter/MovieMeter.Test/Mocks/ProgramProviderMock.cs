@@ -10,6 +10,14 @@ namespace MovieMeter.Test.Mocks
 {
     public class ProgramProviderMock : IProgramProvider
     {
+
+
+        public ProgramProviderMock()
+        {
+            HarvestedPrograms = MockFactory.GetPrograms();
+            UpdatedHarvestedPrograms = MockFactory.GetUpdatedPrograms();
+        }
+
         public bool GetProgramsCalled { get; internal set; }
 
         public Task<List<Program>> GetPrograms()
@@ -17,5 +25,9 @@ namespace MovieMeter.Test.Mocks
             GetProgramsCalled = true;
             return Task.Run(() => new List<Program>());
         }
+
+        public List<Program> HarvestedPrograms { get; private set; } = new List<Program>();
+        public List<Program> UpdatedHarvestedPrograms { get; private set; } = new List<Program>();
+
     }
 }

@@ -143,3 +143,4 @@ C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\WebDriver.S
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\WebDriver.Support.xml
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.Service.dll
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\bin\MovieMeter.Service.pdb
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.API\obj\Debug\MovieMeter.API.csproj.CoreCompileInputs.cache

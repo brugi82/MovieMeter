@@ -14,7 +14,7 @@ namespace MovieMeter.Model
         public string Genre { get; set; }
         public string Plot { get; set; }
         public string Actors { get; set; }
-        public float ImdbRating { get; set; }
+        public double ImdbRating { get; set; }
         public int ImdbVotes { get; set; }
         public string Source { get; set; }
         public ProgramType Type { get; set; }

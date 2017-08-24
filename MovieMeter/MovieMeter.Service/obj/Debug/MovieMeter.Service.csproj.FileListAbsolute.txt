@@ -26,3 +26,4 @@ C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Service\bin\Debug\H
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Service\bin\Debug\HtmlAgilityPack.xml
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Service\bin\Debug\WebDriver.xml
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Service\bin\Debug\WebDriver.Support.xml
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Service\obj\Debug\MovieMeter.Service.csproj.CoreCompileInputs.cache

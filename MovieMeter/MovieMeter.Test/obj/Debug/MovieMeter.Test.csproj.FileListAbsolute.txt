@@ -37,3 +37,4 @@ C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\bin\Debug\Auto
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\bin\Debug\SimpleInjector.xml
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\bin\Debug\EntityFramework.xml
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\bin\Debug\WebDriver.Support.xml
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Test\obj\Debug\MovieMeter.Test.csproj.CoreCompileInputs.cache

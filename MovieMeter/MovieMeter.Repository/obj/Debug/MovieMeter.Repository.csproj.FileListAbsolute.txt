@@ -62,3 +62,4 @@ C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debu
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\WebDriver.xml
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\WebDriver.Support.dll
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\bin\Debug\WebDriver.Support.xml
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Repository\obj\Debug\MovieMeter.Repository.csproj.CoreCompileInputs.cache

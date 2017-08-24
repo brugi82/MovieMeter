@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="InterpreterTests.cs" />
+    <Compile Include="Mocks\MockFactory.cs" />
     <Compile Include="Mocks\MovieMeterRepositoryMock.cs" />
     <Compile Include="Mocks\ProgramProviderMock.cs" />
     <Compile Include="MovieMeterServiceTests.cs" />

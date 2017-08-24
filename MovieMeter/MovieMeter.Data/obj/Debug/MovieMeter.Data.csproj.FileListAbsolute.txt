@@ -38,3 +38,5 @@ C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\obj\Debug\Movi
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\obj\Debug\MovieMeter.Data.csproj.GenerateResource.Cache
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\obj\Debug\MovieMeter.Data.dll
 C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\obj\Debug\MovieMeter.Data.pdb
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\obj\Debug\MovieMeter.Data.csprojResolveAssemblyReference.cache
+C:\Users\Milos\Source\Repos\MovieMeter\MovieMeter\MovieMeter.Data\obj\Debug\MovieMeter.Data.csproj.CoreCompileInputs.cache

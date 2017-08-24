@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MovieMeter.Model;
 using MovieMeter.Model.Contracts;
 using MovieMeter.Repository.Contracts;
 using MovieMeter.Service;
@@ -67,13 +68,44 @@ namespace MovieMeter.Test
         }
 
         [TestMethod]
-        public async Task MovieMeterService_WhenHarvestMovieData_ShouldCallProgramProvider()
+        public async Task MovieMeterService_HarvestMovieData_ShouldCallProgramProvider()
         {
             var service = new MovieMeterService(_repository, _programProvider);
 
             await service.HarvestMovieData();
 
             Assert.IsTrue(_programProvider.GetProgramsCalled);
+        }
+
+        [TestMethod]
+        public async Task MovieMeterService_HarvestMovieData_ShouldCallAddOrUpdateOnRepository()
+        {
+            var service = new MovieMeterService(_repository, _programProvider);
+
+            await service.HarvestMovieData();
+
+            Assert.IsTrue(_programProvider.GetProgramsCalled);
+        }
+
+        [TestMethod]
+        public async Task MovieMeterService_HarvestMovieData_ShouldAddAllReturnedItemsToRepository()
+        {
+            var service = new MovieMeterService(_repository, _programProvider);
+
+            await service.HarvestMovieData();
+
+            Assert.AreEqual(3, _repository.MockRepository.Count);
+            CompareCollections<Program>(_programProvider.HarvestedPrograms, _repository.MockRepository);
+        }
+
+        private void CompareCollections<T>(List<T> source, List<T> target)
+        {
+            Assert.AreEqual(source.Count, target.Count);
+
+            for (int index = 0; index < source.Count; index++)
+            {
+                Assert.AreEqual(source[index], target[index]);
+            }
         }
     }
 }
