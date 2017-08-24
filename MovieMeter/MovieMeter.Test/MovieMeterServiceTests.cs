@@ -14,8 +14,8 @@ namespace MovieMeter.Test
     [TestClass]
     public class MovieMeterServiceTests
     {
-        private IMovieMeterRepository _repository;
-        private IProgramProvider _programProvider;
+        private MovieMeterRepositoryMock _repository;
+        private ProgramProviderMock _programProvider;
 
         [TestInitialize]
         public void InitTests()
@@ -54,6 +54,26 @@ namespace MovieMeter.Test
         public void MovieMeterService_GivenNullProgramProviderInCtor_ShouldThrowArgumentNullException()
         {
             var service = new MovieMeterService(_repository, null);
+        }
+
+        [TestMethod]
+        public async Task MovieMeterService_WhenGetAllPrograms_ShouldCallRepository()
+        {
+            var service = new MovieMeterService(_repository, _programProvider);
+
+            var programs = await service.GetAllPrograms();
+
+            Assert.IsTrue(_repository.GetAllProgramsCalled);
+        }
+
+        [TestMethod]
+        public async Task MovieMeterService_WhenHarvestMovieData_ShouldCallProgramProvider()
+        {
+            var service = new MovieMeterService(_repository, _programProvider);
+
+            await service.HarvestMovieData();
+
+            Assert.IsTrue(_programProvider.GetProgramsCalled);
         }
     }
 }

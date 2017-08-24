@@ -10,9 +10,13 @@ namespace MovieMeter.Test.Mocks
 {
     public class MovieMeterRepositoryMock : IMovieMeterRepository
     {
+        public bool GetAllProgramsCalled { get; internal set; }
+
         public Task<List<Program>> GetAllPrograms()
         {
-            throw new NotImplementedException();
+            GetAllProgramsCalled = true;
+
+            return Task.Run(() => new List<Program>());
         }
 
         public Task HarvestMovieData()

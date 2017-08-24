@@ -20,14 +20,15 @@ namespace MovieMeter.Service
         public IMovieMeterRepository Repository { get; private set; }
         public IProgramProvider ProgramProvider { get; private set; }
 
-        public Task<List<Program>> GetAllPrograms()
+        public async Task<List<Program>> GetAllPrograms()
         {
-            throw new NotImplementedException();
+            return await Repository.GetAllPrograms();
         }
 
-        public Task HarvestMovieData()
+        public async Task HarvestMovieData()
         {
-            throw new NotImplementedException();
+            var programs = await ProgramProvider.GetPrograms();
+
         }
     }
 }

@@ -10,9 +10,12 @@ namespace MovieMeter.Test.Mocks
 {
     public class ProgramProviderMock : IProgramProvider
     {
+        public bool GetProgramsCalled { get; internal set; }
+
         public Task<List<Program>> GetPrograms()
         {
-            throw new NotImplementedException();
+            GetProgramsCalled = true;
+            return Task.Run(() => new List<Program>());
         }
     }
 }
