@@ -12,7 +12,7 @@ namespace MovieMeter.WebHarvester
     public class OmdbRatingProvider : IRatingProvider
     {
         private const string omdbBaseAddress = "http://www.omdbapi.com/";
-        private const string omdbKey = ""
+        private const string omdbKey = "plzBanMe";
         private static HttpClient _httpClient = new HttpClient();
 
         public OmdbRatingProvider()
