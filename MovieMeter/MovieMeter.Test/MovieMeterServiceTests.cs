@@ -68,35 +68,62 @@ namespace MovieMeter.Test
         }
 
         [TestMethod]
-        public async Task MovieMeterService_HarvestMovieData_ShouldCallProgramProvider()
+        public async Task MovieMeterService_WhenGetAllUpdates_ShouldGetAllUpdatesFromRepository()
         {
             var service = new MovieMeterService(_repository, _programProvider);
 
-            await service.HarvestMovieData();
+            var updates = await service.GetAllUpdates();
 
-            Assert.IsTrue(_programProvider.GetProgramsCalled);
+            Assert.IsTrue(_repository.GetAllUpdatesCalled);
         }
 
         [TestMethod]
-        public async Task MovieMeterService_HarvestMovieData_ShouldCallAddOrUpdateOnRepository()
+        public async Task MovieMeterService_WhenGetUpdates_ShouldRequestUpdatesFromRepositoryForSameSourceId()
         {
             var service = new MovieMeterService(_repository, _programProvider);
+            var sourceId = Guid.NewGuid().ToString();
 
-            await service.HarvestMovieData();
+            var updates = await service.GetUpdatesForSource(sourceId);
 
-            Assert.IsTrue(_programProvider.GetProgramsCalled);
+            Assert.IsTrue(_repository.GetUpdatesCalled);
+            Assert.AreEqual(sourceId, _repository.GetUpdatesSourceId);
         }
 
         [TestMethod]
-        public async Task MovieMeterService_HarvestMovieData_ShouldAddAllReturnedItemsToRepository()
+        public async Task MovieMeterService_WhenGetLatestUpdate_ShouldRequestLatestUpdateFromRepositoryForSameSourceId()
+        {
+            var service = new MovieMeterService(_repository, _programProvider);
+            var sourceId = Guid.NewGuid().ToString();
+
+            var latestUpdate = await service.GetLatestUpdateForSource(sourceId);
+
+            Assert.IsTrue(_repository.GetLatestUpdateCalled);
+            Assert.AreEqual(sourceId, _repository.GetLatestUpdateSourceId);
+        }
+
+        [TestMethod]
+        public async Task MovieMeterService_WhenGetAllSources_ShouldRequestAllSourcesFromRepository()
         {
             var service = new MovieMeterService(_repository, _programProvider);
 
-            await service.HarvestMovieData();
+            var sources = await service.GetAllSources();
 
-            Assert.AreEqual(3, _repository.MockRepository.Count);
-            CompareCollections<Program>(_programProvider.HarvestedPrograms, _repository.MockRepository);
+            Assert.IsTrue(_repository.GetAllSourcesCalled);
         }
+
+        [TestMethod]
+        public async Task MovieMeterService_WhenGetSource_ShouldRequestSourceFromRepositoryWithSameId()
+        {
+            var service = new MovieMeterService(_repository, _programProvider);
+            var sourceId = Guid.NewGuid().ToString();
+
+            var source = await service.GetSource(sourceId);
+
+            Assert.IsTrue(_repository.GetSourceCalled);
+            Assert.AreEqual(sourceId, _repository.GetSourceId);
+        }
+
+
 
         private void CompareCollections<T>(List<T> source, List<T> target)
         {

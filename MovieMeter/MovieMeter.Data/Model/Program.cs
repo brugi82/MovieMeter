@@ -16,7 +16,11 @@ namespace MovieMeter.Data.Model
         public string Actors { get; set; }
         public float ImdbRating { get; set; }
         public int ImdbVotes { get; set; }
-        public string Source { get; set; }
         public ProgramType Type { get; set; }
+        public int UpdateId { get; set; }
+
+        public string SourceId { get; set; }
+        public virtual Source Source { get; set; }
+
     }
 }

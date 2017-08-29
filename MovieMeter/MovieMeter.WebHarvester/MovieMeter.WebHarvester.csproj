@@ -57,11 +57,13 @@
   <ItemGroup>
     <Compile Include="Contracts\IHarvester.cs" />
     <Compile Include="Contracts\IParser.cs" />
+    <Compile Include="Contracts\IRatingProvider.cs" />
     <Compile Include="Contracts\IWebPageLoader.cs" />
     <Compile Include="Harvester\Harvester.cs" />
     <Compile Include="Harvester\HarvesterFactory.cs" />
     <Compile Include="Harvester\SeleniumTMNLoader.cs" />
     <Compile Include="Harvester\SeleniumWebSiteLoader.cs" />
+    <Compile Include="OmdbRatingProvider.cs" />
     <Compile Include="Parsers\ParserFactory.cs" />
     <Compile Include="Parsers\TMNParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMeter.Model", "MovieMeter.Model\MovieMeter.Model.csproj", "{F5C9BA07-851A-44CE-AE2C-7723272D6EBE}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMeter.WebHarvester", "MovieMeter.WebHarvester\MovieMeter.WebHarvester.csproj", "{E754F9D2-8189-4393-BBD4-99FE3C0FEECB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMeter.Service", "MovieMeter.Service\MovieMeter.Service.csproj", "{CB5A75B6-D0C9-46EE-BC2C-1DB90ECB673E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9F86CF21-3C79-4182-B9C4-B7CA171C7377}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,5 +56,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF5A29E7-7AA7-4D6C-A9D1-A3B9ED1B1B1B} = {9F86CF21-3C79-4182-B9C4-B7CA171C7377}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A842E10-8D05-4690-ACAF-EE86F697E2F4}
 	EndGlobalSection
 EndGlobal

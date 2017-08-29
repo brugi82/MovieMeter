@@ -25,6 +25,31 @@ namespace MovieMeter.Service
             return await Repository.GetAllPrograms();
         }
 
+        public async Task<List<Source>> GetAllSources()
+        {
+            return await Repository.GetAllSources();
+        }
+
+        public async Task<List<Update>> GetAllUpdates()
+        {
+            return await Repository.GetAllUpdates();
+        }
+
+        public async Task<Update> GetLatestUpdateForSource(string sourceId)
+        {
+            return await Repository.GetLatestUpdateForSource(sourceId);
+        }
+
+        public async Task<Source> GetSource(string sourceId)
+        {
+            return await Repository.GetSource(sourceId);
+        }
+
+        public async Task<List<Update>> GetUpdatesForSource(string sourceId)
+        {
+            return await Repository.GetUpdatesForSource(sourceId);
+        }
+
         public async Task HarvestMovieData()
         {
             var programs = await ProgramProvider.GetPrograms();

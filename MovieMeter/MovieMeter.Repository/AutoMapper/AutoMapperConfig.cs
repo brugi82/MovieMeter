@@ -14,6 +14,8 @@ namespace MovieMeter.Repository.AutoMapper
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMap<MovieMeter.Data.Model.Program, MovieMeter.Model.Program>();
+                cfg.CreateMap<MovieMeter.Data.Model.Source, MovieMeter.Model.Source>();
+                cfg.CreateMap<MovieMeter.Data.Model.Update, MovieMeter.Model.Update>();
             });
         }
     }

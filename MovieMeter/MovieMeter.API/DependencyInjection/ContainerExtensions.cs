@@ -16,6 +16,7 @@ namespace MovieMeter.API.DependencyInjection
             container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
 
             container.Register<ProgramsController>(Lifestyle.Scoped);
+            container.Register<UpdatesController>(Lifestyle.Scoped);
         }
     }
 }

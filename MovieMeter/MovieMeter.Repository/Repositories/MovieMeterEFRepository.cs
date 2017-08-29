@@ -32,24 +32,47 @@ namespace MovieMeter.Repository.Repositories
             return programs;
         }
 
-        public async Task HarvestMovieData()
+        public async Task<List<Source>> GetAllSources()
         {
-            await Task.Run(() =>
-            {
-                using (var loader = HarvesterFactory.GetSeleniumLoader())
-                {
-                    var programs = new List<IProgramInfo>();
+            var query = await _context.Sources.ToListAsync();
+            var sources = query.Select(elem => _mapper.Map<Source>(elem)).ToList();
 
-                    var pages = loader.GetProgramPagesHtml();
-                    var parser = ParserFactory.GetParser(loader);
+            return sources;
+        }
 
-                    foreach (var page in pages)
-                    {
-                        programs.Add(parser.Parse(page));
-                    }
-                }
-            });
-            
+        public async Task<List<Update>> GetAllUpdates()
+        {
+            var query = await _context.Updates.ToListAsync();
+            var updates = query.Select(elem => _mapper.Map<Update>(elem)).ToList();
+
+            return updates;
+        }
+
+        public async Task<Update> GetLatestUpdateForSource(string sourceId)
+        {
+            var query = await _context.Updates.Where(elem => elem.SourceId == sourceId).OrderBy(elem => elem.UpdatedOn).FirstOrDefaultAsync();
+
+            var update = _mapper.Map<Update>(query);
+
+            return update;
+        }
+
+        public async Task<Source> GetSource(string sourceId)
+        {
+            var query = await _context.Sources.Where(elem => elem.Id == sourceId).SingleAsync();
+
+            var source = _mapper.Map<Source>(query);
+
+            return source;
+        }
+
+        public async Task<List<Update>> GetUpdatesForSource(string sourceId)
+        {
+            var query = await _context.Updates.Where(elem => elem.SourceId == sourceId).OrderBy(elem => elem.UpdatedOn).ToListAsync();
+
+            var updates = query.Select(elem => _mapper.Map<Update>(elem)).ToList();
+
+            return updates;
         }
     }
 }

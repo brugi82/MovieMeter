@@ -35,16 +35,17 @@ namespace MovieMeter.API.Controllers
         [HttpPost]
         public async Task<IHttpActionResult> Post()
         {
-            try
-            {
+            //try
+            //{
 
-                await _service.HarvestMovieData();
-                return Ok();
-            }
-            catch (Exception)
-            {
-                return InternalServerError();
-            }
+            //    await _service.HarvestMovieData();
+            //    return Ok();
+            //}
+            //catch (Exception)
+            //{
+            //    return InternalServerError();
+            //}
+            return Ok();
         }
     }
 }

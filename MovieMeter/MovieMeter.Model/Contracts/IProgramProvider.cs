@@ -8,6 +8,6 @@ namespace MovieMeter.Model.Contracts
 {
     public interface IProgramProvider
     {
-        Task<List<Program>> GetPrograms();
+        Task<List<Program>> GetPrograms(int parserId);
     }
 }
