@@ -15,12 +15,12 @@ namespace MovieMeter.Model
 
         public ProgramInfo(string name, int year, string source)
         {
-            Name = name;
+            Title = name;
             Source = source;
             Year = year;
         }
 
-        public string Name { get; set; }
+        public string Title { get; set; }
 
         public int Year { get; set; }
 
@@ -28,7 +28,7 @@ namespace MovieMeter.Model
 
         public override string ToString()
         {
-            return $"{Name}, {Year}, {Source}";
+            return $"{Title}, {Year}, {Source}";
         }
     }
 }

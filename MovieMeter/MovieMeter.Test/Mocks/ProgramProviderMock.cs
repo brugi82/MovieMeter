@@ -26,6 +26,11 @@ namespace MovieMeter.Test.Mocks
             return Task.Run(() => new List<Program>());
         }
 
+        public Task<List<Program>> GetPrograms(int parserId)
+        {
+            return Task.Run(() => new List<Program>());
+        }
+
         public List<Program> HarvestedPrograms { get; private set; } = new List<Program>();
         public List<Program> UpdatedHarvestedPrograms { get; private set; } = new List<Program>();
 

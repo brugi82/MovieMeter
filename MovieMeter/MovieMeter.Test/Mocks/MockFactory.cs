@@ -16,7 +16,7 @@ namespace MovieMeter.Test.Mocks
                 new Program()
                 {
                     Id = "1",
-                    Name = "Test 1",
+                    Title = "Test 1",
                     ImdbRating = 5.7,
                     ImdbVotes = 12000
 
@@ -24,7 +24,7 @@ namespace MovieMeter.Test.Mocks
                 new Program()
                 {
                     Id = "2",
-                    Name = "Test 2",
+                    Title = "Test 2",
                     ImdbRating = 7.2,
                     ImdbVotes = 43000
 
@@ -32,7 +32,7 @@ namespace MovieMeter.Test.Mocks
                 new Program()
                 {
                     Id = "3",
-                    Name = "Test 3",
+                    Title = "Test 3",
                     ImdbRating = 3.4,
                     ImdbVotes = 39000
 
@@ -47,7 +47,7 @@ namespace MovieMeter.Test.Mocks
                 new Program()
                 {
                     Id = "1",
-                    Name = "Test 1",
+                    Title = "Test 1",
                     ImdbRating = 6.0,
                     ImdbVotes = 15000
 
@@ -55,7 +55,7 @@ namespace MovieMeter.Test.Mocks
                 new Program()
                 {
                     Id = "2",
-                    Name = "Test 2",
+                    Title = "Test 2",
                     ImdbRating = 7.0,
                     ImdbVotes = 51000
 
@@ -63,7 +63,7 @@ namespace MovieMeter.Test.Mocks
                 new Program()
                 {
                     Id = "4",
-                    Name = "Test 4",
+                    Title = "Test 4",
                     ImdbRating = 9.1,
                     ImdbVotes = 187000
 
@@ -71,7 +71,7 @@ namespace MovieMeter.Test.Mocks
                 new Program()
                 {
                     Id = "5",
-                    Name = "Test 5",
+                    Title = "Test 5",
                     ImdbRating = 5.7,
                     ImdbVotes = 81000
 

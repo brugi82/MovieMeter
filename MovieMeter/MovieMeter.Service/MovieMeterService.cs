@@ -52,7 +52,7 @@ namespace MovieMeter.Service
 
         public async Task HarvestMovieData()
         {
-            var programs = await ProgramProvider.GetPrograms();
+            var programs = await ProgramProvider.GetPrograms(-1);
 
         }
     }

@@ -8,7 +8,7 @@ namespace MovieMeter.Model
 {
     public interface IProgramInfo
     {
-        string Name { get; set; }
+        string Title { get; set; }
         int Year { get; set; }
         string Source { get; set; }
     }
