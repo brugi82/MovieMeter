@@ -20,7 +20,7 @@ namespace MovieMeter.Model
         public string Country { get; set; }
         public string Language { get; set; }
         public double ImdbRating { get; set; }
-        public int ImdbVotes { get; set; }
+        public string ImdbVotes { get; set; }
         public string Poster { get; set; }
         public ProgramType Type { get; set; }
 

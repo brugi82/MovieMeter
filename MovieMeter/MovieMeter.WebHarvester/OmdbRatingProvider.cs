@@ -60,7 +60,7 @@ namespace MovieMeter.WebHarvester
 
         private string GetSearchParamsString(IProgramInfo program)
         {
-            string result = "?t=";
+            string result = $"?apikey={omdbKey}&t=";
 
             var titleWords = program.Title.Split(' ');
             for (int index = 0; index < titleWords.Length; index++)
