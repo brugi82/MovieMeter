@@ -20,9 +20,14 @@ namespace Updater
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private MainWindowViewModel _viewModel;
+
+        public MainWindow(MainWindowViewModel viewModel)
         {
             InitializeComponent();
+
+            _viewModel = viewModel;
+            DataContext = _viewModel;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -46,10 +46,10 @@ namespace MovieMeter.Repository.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task AddUpdate(Update update, List<Program> programs)
+        public async Task AddUpdate(Update update, List<Program> programs, string sourceId)
         {
             var updateDbEntity = _mapper.Map<MovieMeter.Data.Model.Update>(update);
-            var sourceDbEntity = await _context.Sources.FirstAsync(elem => elem.Id == update.Source.Id);
+            var sourceDbEntity = await _context.Sources.FirstAsync(elem => elem.Id == sourceId);
 
             sourceDbEntity.Updates.Add(updateDbEntity);
             _context.Updates.Add(updateDbEntity);
@@ -119,9 +119,17 @@ namespace MovieMeter.Repository.Repositories
 
         public async Task<Source> GetSource(string sourceId)
         {
-            var query = await _context.Sources.Where(elem => elem.Id == sourceId).SingleAsync();
+            Source source = null;
+            try
+            {
+                var query = await _context.Sources.Where(elem => elem.Id == sourceId).SingleAsync();
 
-            var source = _mapper.Map<Source>(query);
+                source = _mapper.Map<Source>(query);
+            }
+            catch(Exception ex)
+            {
+
+            }
 
             return source;
         }

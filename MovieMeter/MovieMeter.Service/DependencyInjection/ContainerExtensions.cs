@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MovieMeter.Repository.DependencyInjection;
+using MovieMeter.WebHarvester.DependencyInjection;
 
 namespace MovieMeter.Service.DependencyInjection
 {
@@ -14,7 +15,8 @@ namespace MovieMeter.Service.DependencyInjection
         public static void RegisterService(this Container container)
         {
             container.RegisterRepositories();
-            container.Register<IMovieMeterService, MovieMeterService>(Lifestyle.Scoped);
+            container.RegisterHarvester();
+            container.Register<IMovieMeterService, MovieMeterService>();
         }
     }
 }

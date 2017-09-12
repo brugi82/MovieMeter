@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <StackPanel>
-        <Button Content="Create update" Click="Button_Click"/>
+        <Button Content="Create update" Command="{Binding CreateUpdateCommand}"/>
     </StackPanel>
 </Window>

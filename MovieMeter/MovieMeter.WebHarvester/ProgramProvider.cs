@@ -19,9 +19,12 @@ namespace MovieMeter.WebHarvester
             _ratingProvider = ratingProvider;
             _harvester = harvester;
         }
-        public Task<List<Program>> GetPrograms(int parserId)
+        public async Task<List<Program>> GetPrograms(int parserId)
         {
-            throw new NotImplementedException();
+            var programInfos = await _harvester.Harvest();
+            var programs = await _ratingProvider.GetProgramDetails(programInfos);
+
+            return programs;
         }
     }
 }

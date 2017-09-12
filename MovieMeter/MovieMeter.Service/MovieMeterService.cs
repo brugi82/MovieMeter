@@ -13,8 +13,13 @@ namespace MovieMeter.Service
     {
         public MovieMeterService(IMovieMeterRepository repository, IProgramProvider provider)
         {
-            Repository = repository ?? throw new ArgumentNullException(nameof(repository));
-            ProgramProvider = provider ?? throw new ArgumentNullException(nameof(provider));
+            if(repository == null)
+                throw new ArgumentNullException(nameof(repository));
+            if(provider == null)
+                throw new ArgumentNullException(nameof(provider));
+
+            Repository = repository;
+            ProgramProvider = provider; 
         }
 
         public IMovieMeterRepository Repository { get; private set; }
@@ -23,13 +28,9 @@ namespace MovieMeter.Service
         public async Task CreateUpdate(string sourceId)
         {
             var source = await Repository.GetSource(sourceId);
-            Update newUpdate = new Update()
-            {
-                Source = source,
-                UpdatedOn = DateTime.Now
-            };
-            var programs = await ProgramProvider.GetPrograms(newUpdate.Source.ParserId);
-            await Repository.AddUpdate(newUpdate, programs);
+            Update newUpdate = new Update();
+            var programs = await ProgramProvider.GetPrograms(source.ParserId);
+            await Repository.AddUpdate(newUpdate, programs, sourceId);
             
         }
 

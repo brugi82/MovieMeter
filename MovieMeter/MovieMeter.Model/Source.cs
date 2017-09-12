@@ -13,7 +13,7 @@ namespace MovieMeter.Model
         public string Description { get; set; }
         public string Url { get; set; }
         public int ParserId { get; set; }
-        public List<Update> Updates { get; set; } = new List<Update>();
-        public List<Program> Programs { get; set; } = new List<Program>();
+        //public List<Update> Updates { get; set; } = new List<Update>();
+        //public List<Program> Programs { get; set; } = new List<Program>();
     }
 }

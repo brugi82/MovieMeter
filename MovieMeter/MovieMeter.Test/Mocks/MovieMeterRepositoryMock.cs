@@ -84,7 +84,7 @@ namespace MovieMeter.Test.Mocks
             throw new NotImplementedException();
         }
 
-        public Task AddUpdate(Update update, List<Program> programs)
+        public Task AddUpdate(Update update, List<Program> programs, string sourceId)
         {
             throw new NotImplementedException();
         }

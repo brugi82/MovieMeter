@@ -17,7 +17,7 @@ namespace MovieMeter.Repository.DependencyInjection
         {
             container.RegisterDatabase();
             container.RegisterAutoMapper();
-            container.Register<IMovieMeterRepository, MovieMeterEFRepository>(Lifestyle.Scoped);
+            container.Register<IMovieMeterRepository, MovieMeterEFRepository>();
         }
 
         public static void RegisterAutoMapper(this Container container)
@@ -29,7 +29,7 @@ namespace MovieMeter.Repository.DependencyInjection
             var mapper = config.CreateMapper();
 
             container.RegisterSingleton<MapperConfiguration>(config);
-            container.Register<IMapper>(() => config.CreateMapper(container.GetInstance), Lifestyle.Scoped);
+            container.Register<IMapper>(() => config.CreateMapper(container.GetInstance));
         }
     }
 }
