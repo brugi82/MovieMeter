@@ -8,6 +8,6 @@ namespace MovieMeter.WebHarvester.Contracts
 {
     public interface IWebPageLoader : IDisposable
     {
-        List<string> GetProgramPagesHtml();
+        Task<List<string>> GetProgramPagesHtml();
     }
 }

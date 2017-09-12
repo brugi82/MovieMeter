@@ -62,6 +62,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Program.cs" />
     <Compile Include="Model\ProgramType.cs" />
+    <Compile Include="Model\ProgramUserData.cs" />
     <Compile Include="Model\Source.cs" />
     <Compile Include="Model\Update.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

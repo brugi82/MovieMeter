@@ -20,9 +20,22 @@ namespace MovieMeter.Service
         public IMovieMeterRepository Repository { get; private set; }
         public IProgramProvider ProgramProvider { get; private set; }
 
-        public async Task<List<Program>> GetAllPrograms()
+        public async Task CreateUpdate(string sourceId)
         {
-            return await Repository.GetAllPrograms();
+            var source = await Repository.GetSource(sourceId);
+            Update newUpdate = new Update()
+            {
+                Source = source,
+                UpdatedOn = DateTime.Now
+            };
+            var programs = await ProgramProvider.GetPrograms(newUpdate.Source.ParserId);
+            await Repository.AddUpdate(newUpdate, programs);
+            
+        }
+
+        public async Task<List<Program>> GetAllPrograms(ProgramQuery query)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<List<Source>> GetAllSources()
@@ -40,6 +53,11 @@ namespace MovieMeter.Service
             return await Repository.GetLatestUpdateForSource(sourceId);
         }
 
+        public Task<Program> GetProgram(string programId)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Source> GetSource(string sourceId)
         {
             return await Repository.GetSource(sourceId);
@@ -54,6 +72,11 @@ namespace MovieMeter.Service
         {
             var programs = await ProgramProvider.GetPrograms(-1);
 
+        }
+
+        public Task UpdateProgram(Program program)
+        {
+            throw new NotImplementedException();
         }
     }
 }

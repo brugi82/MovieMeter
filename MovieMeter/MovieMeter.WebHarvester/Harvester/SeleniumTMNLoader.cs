@@ -21,35 +21,39 @@ namespace MovieMeter.WebHarvester.Harvester
         {
         }
 
-        public List<string> GetProgramPagesHtml()
+        public async Task<List<string>> GetProgramPagesHtml()
         {
             var result = new List<string>();
-            var pageLinks = new List<string>();
 
-            NavigateTo(ProgramListAddress);
-
-            var list = WebDriver.FindElementsByCssSelector(CssSelectorList);
-            var children = list.First().FindElements(By.XPath(".//*"));
-            foreach (var child in children)
+            await Task.Run(() =>
             {
-                //if (child.GetAttribute("innerHTML") == "Z")
-                if (children.First() != child)
+                var pageLinks = new List<string>();
+
+                NavigateTo(ProgramListAddress);
+
+                var list = WebDriver.FindElementsByCssSelector(CssSelectorList);
+                var children = list.First().FindElements(By.XPath(".//*"));
+                foreach (var child in children)
                 {
-                    var firstElementName = WebDriver.FindElement(By.ClassName("movies-alpha-list")).FindElements(By.TagName("li")).First().FindElements(By.ClassName("title")).Single().FindElements(By.TagName("a")).Single().Text;
-                    var count = WebDriver.FindElement(By.ClassName("movies-alpha-list")).FindElements(By.TagName("li")).Count();
-                    child.Click();
+                    //if (child.GetAttribute("innerHTML") == "Z")
+                    if (children.First() != child)
+                    {
+                        var firstElementName = WebDriver.FindElement(By.ClassName("movies-alpha-list")).FindElements(By.TagName("li")).First().FindElements(By.ClassName("title")).Single().FindElements(By.TagName("a")).Single().Text;
+                        var count = WebDriver.FindElement(By.ClassName("movies-alpha-list")).FindElements(By.TagName("li")).Count();
+                        child.Click();
 
-                WebDriverWait wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(5));
+                        WebDriverWait wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(5));
 
-                    //WebDriverWait wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(10));
-                    wait.Until<bool>(d => d.FindElement(By.ClassName("movies-alpha-list")).FindElements(By.TagName("li")).First().FindElements(By.ClassName("title")).Single().FindElements(By.TagName("a")).Single().Text != firstElementName);
-                    //wait.Until<bool>(d => d.FindElement(By.ClassName("movies-alpha-list")).FindElements(By.TagName("li")).Count() != count);
+                        //WebDriverWait wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(10));
+                        wait.Until<bool>(d => d.FindElement(By.ClassName("movies-alpha-list")).FindElements(By.TagName("li")).First().FindElements(By.ClassName("title")).Single().FindElements(By.TagName("a")).Single().Text != firstElementName);
+                        //wait.Until<bool>(d => d.FindElement(By.ClassName("movies-alpha-list")).FindElements(By.TagName("li")).Count() != count);
+                    }
+                    pageLinks.AddRange(GetLinks(WebDriver.PageSource));
                 }
-                pageLinks.AddRange(GetLinks(WebDriver.PageSource));
-            }
 
-            foreach (var detailsUrl in pageLinks)
-                result.Add(GetRenderedHtml(detailsUrl));
+                foreach (var detailsUrl in pageLinks)
+                    result.Add(GetRenderedHtml(detailsUrl));
+            });
 
             return result;
         }

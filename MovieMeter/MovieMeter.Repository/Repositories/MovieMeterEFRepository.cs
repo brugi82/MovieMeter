@@ -24,12 +24,64 @@ namespace MovieMeter.Repository.Repositories
             _mapper = mapper;
         }
 
+        public Task<Program> AddOrUpdateProgram(Program program)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task AddOrUpdateProgramUserData(ProgramUserData programUserData)
+        {
+            var existing = await _context.ProgramUserData.FirstOrDefaultAsync(elem => elem.ProgramId == programUserData.ProgramId && elem.UserId == programUserData.UserId);
+            if(existing == null)
+            {
+                var newDbEntity = _mapper.Map<MovieMeter.Data.Model.ProgramUserData>(programUserData);
+                _context.ProgramUserData.Add(newDbEntity);
+            }
+            else
+            {
+                existing.UserRating = programUserData.UserRating;
+                existing.Watched = programUserData.Watched;
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task AddUpdate(Update update, List<Program> programs)
+        {
+            var updateDbEntity = _mapper.Map<MovieMeter.Data.Model.Update>(update);
+            var sourceDbEntity = await _context.Sources.FirstAsync(elem => elem.Id == update.Source.Id);
+
+            sourceDbEntity.Updates.Add(updateDbEntity);
+            _context.Updates.Add(updateDbEntity);
+
+            for (int index = 0; index < programs.Count; index++)
+            {
+                var program = programs[index];
+                var programDbEntity = await _context.Programs.FirstOrDefaultAsync(elem => elem.ImdbId == program.ImdbId);
+                if (programDbEntity == null)
+                {
+                    programDbEntity = _mapper.Map<MovieMeter.Data.Model.Program>(program);
+                    _context.Programs.Add(programDbEntity);
+                }
+
+                programDbEntity.Source = sourceDbEntity;
+                programDbEntity.Update = updateDbEntity;
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<List<Program>> GetAllPrograms()
         {
             var query = await _context.Programs.ToListAsync();
             var programs = query.Select(elem => _mapper.Map<Program>(elem)).ToList();
 
             return programs;
+        }
+
+        public Task<List<Program>> GetAllPrograms(ProgramQuery query)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<List<Source>> GetAllSources()
@@ -57,6 +109,14 @@ namespace MovieMeter.Repository.Repositories
             return update;
         }
 
+        public async Task<Program> GetProgram(string programId)
+        {
+            var programData = await _context.Programs.FirstAsync(elem => elem.Id == programId);
+            var program = _mapper.Map<Program>(programData);
+
+            return program;
+        }
+
         public async Task<Source> GetSource(string sourceId)
         {
             var query = await _context.Sources.Where(elem => elem.Id == sourceId).SingleAsync();
@@ -73,6 +133,19 @@ namespace MovieMeter.Repository.Repositories
             var updates = query.Select(elem => _mapper.Map<Update>(elem)).ToList();
 
             return updates;
+        }
+
+        public async Task UpdateProgram(Program program)
+        {
+            if (program == null || string.IsNullOrEmpty(program.Id))
+                throw new ArgumentException("Unable to update", nameof(program));
+
+            var programData = await _context.Programs.FirstAsync(elem => elem.Id == program.Id);
+
+            programData.ImdbRating = program.ImdbRating;
+            programData.ImdbVotes = program.ImdbVotes;
+            programData.Watched = program.Watched;
+            programData.UserRating = program.UserRating;
         }
     }
 }

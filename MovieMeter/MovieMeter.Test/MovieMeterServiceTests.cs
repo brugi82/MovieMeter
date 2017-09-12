@@ -60,9 +60,10 @@ namespace MovieMeter.Test
         [TestMethod]
         public async Task MovieMeterService_WhenGetAllPrograms_ShouldCallRepository()
         {
+            var query = new ProgramQuery();
             var service = new MovieMeterService(_repository, _programProvider);
 
-            var programs = await service.GetAllPrograms();
+            var programs = await service.GetAllPrograms(query);
 
             Assert.IsTrue(_repository.GetAllProgramsCalled);
         }

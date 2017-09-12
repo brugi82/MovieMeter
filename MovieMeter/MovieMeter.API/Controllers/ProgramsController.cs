@@ -1,4 +1,5 @@
-﻿using MovieMeter.Model.Contracts;
+﻿using MovieMeter.Model;
+using MovieMeter.Model.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,11 +20,11 @@ namespace MovieMeter.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IHttpActionResult> Get()
+        public async Task<IHttpActionResult> Get([FromUri]ProgramQuery query)
         {
             try
             {
-                var result = await _service.GetAllPrograms();
+                var result = await _service.GetAllPrograms(query);
                 return Ok(result);
             }
             catch (Exception)
@@ -32,19 +33,33 @@ namespace MovieMeter.API.Controllers
             }
         }
 
-        [HttpPost]
-        public async Task<IHttpActionResult> Post()
+        [HttpGet]
+        public async Task<IHttpActionResult> Get(string programId)
         {
-            //try
-            //{
+            try
+            {
+                var result = await _service.GetProgram(programId);
+                return Ok(result);
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
+        }
 
-            //    await _service.HarvestMovieData();
-            //    return Ok();
-            //}
-            //catch (Exception)
-            //{
-            //    return InternalServerError();
-            //}
+        [HttpPut]
+        public async Task<IHttpActionResult> Put([FromBody]Program program)
+        {
+            try
+            {
+
+                await _service.UpdateProgram(program);
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
+
             return Ok();
         }
     }

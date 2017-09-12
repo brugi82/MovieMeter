@@ -23,8 +23,9 @@ namespace MovieMeter.Model
         public string ImdbVotes { get; set; }
         public string Poster { get; set; }
         public ProgramType Type { get; set; }
+        public bool Watched { get; set; }
+        public double UserRating { get; set; }
 
-        public Source Source { get; set; }
-        public Update Update { get; set; }
+        public ProgramUserData ProgramUserData { get; set; }
     }
 }

@@ -8,11 +8,15 @@ namespace MovieMeter.Model.Contracts
 {
     public interface IMovieMeterService
     {
-        Task<List<Program>> GetAllPrograms();
+        Task<List<Program>> GetAllPrograms(ProgramQuery query);
         Task<List<Update>> GetAllUpdates();
         Task<List<Update>> GetUpdatesForSource(string sourceId);
         Task<Update> GetLatestUpdateForSource(string sourceId);
         Task<List<Source>> GetAllSources();
         Task<Source> GetSource(string sourceId);
+        Task<Program> GetProgram(string programId);
+        Task UpdateProgram(Program program);
+
+        Task CreateUpdate(string sourceId);
     }
 }

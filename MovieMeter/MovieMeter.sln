@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMeter.Service", "Movie
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9F86CF21-3C79-4182-B9C4-B7CA171C7377}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{91688B83-D253-4080-B467-94E78642D792}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Updater", "Updater\Updater.csproj", "{C29C8B83-3C55-4722-9F40-80CE44CFD487}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,12 +57,17 @@ Global
 		{CB5A75B6-D0C9-46EE-BC2C-1DB90ECB673E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB5A75B6-D0C9-46EE-BC2C-1DB90ECB673E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB5A75B6-D0C9-46EE-BC2C-1DB90ECB673E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C29C8B83-3C55-4722-9F40-80CE44CFD487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C29C8B83-3C55-4722-9F40-80CE44CFD487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C29C8B83-3C55-4722-9F40-80CE44CFD487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C29C8B83-3C55-4722-9F40-80CE44CFD487}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FF5A29E7-7AA7-4D6C-A9D1-A3B9ED1B1B1B} = {9F86CF21-3C79-4182-B9C4-B7CA171C7377}
+		{C29C8B83-3C55-4722-9F40-80CE44CFD487} = {91688B83-D253-4080-B467-94E78642D792}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A842E10-8D05-4690-ACAF-EE86F697E2F4}

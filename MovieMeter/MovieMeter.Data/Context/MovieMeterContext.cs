@@ -28,5 +28,6 @@ namespace MovieMeter.Data.Context
         public DbSet<Program> Programs { get; set; }
         public DbSet<Source> Sources { get; set; }
         public DbSet<Update> Updates { get; set; }
+        public DbSet<ProgramUserData> ProgramUserData { get; set; }
     }
 }

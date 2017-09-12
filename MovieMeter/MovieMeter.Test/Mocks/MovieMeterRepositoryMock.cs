@@ -54,6 +54,41 @@ namespace MovieMeter.Test.Mocks
             return Task.Run(() => new Source());
         }
 
+        public Task<List<Program>> GetAllPrograms(ProgramQuery query)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Program> AddOrUpdateProgram(Program program)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateProgram(Program program)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Program> GetProgram(string programId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddOrUpdateProgramUserData(ProgramUserData programUserData)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddUpdate(Update update)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddUpdate(Update update, List<Program> programs)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Program> MockRepository
         {
             get

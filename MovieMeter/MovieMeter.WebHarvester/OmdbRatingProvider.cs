@@ -48,7 +48,7 @@ namespace MovieMeter.WebHarvester
                 var deserializedProgram = await response.Content.ReadAsAsync<Program>();
                 return deserializedProgram;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new Program()
                 {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MovieMeter.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace MovieMeter.WebHarvester.Contracts
 {
     public interface IHarvester
     {
-        List<Tuple<string, int>> Harvest();
+        Task<List<IProgramInfo>> Harvest();
     }
 }

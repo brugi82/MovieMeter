@@ -8,7 +8,12 @@ namespace MovieMeter.Model
 {
     public class Update
     {
-        public int Id { get; set; }
+        public Update()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
+
+        public string Id { get; set; }
         public DateTime UpdatedOn { get; set; }
         public Source Source { get; set; }
     }

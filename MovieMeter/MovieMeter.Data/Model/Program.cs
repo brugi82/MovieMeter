@@ -23,10 +23,15 @@ namespace MovieMeter.Data.Model
         public string ImdbVotes { get; set; }
         public string Poster { get; set; }
         public ProgramType Type { get; set; }
-        public int UpdateId { get; set; }
+        public bool Watched { get; set; }
+        public double UserRating { get; set; }
 
         public string SourceId { get; set; }
         public virtual Source Source { get; set; }
+        public int UpdateId { get; set; }
+        public virtual Update Update { get; set; }
+
+        public virtual ICollection<ProgramUserData> ProgramUserData { get; set; }
 
     }
 }
