@@ -16,15 +16,21 @@ namespace MovieMeter.WebHarvester
             var ran = new Random();
             await Task.Run(() =>
             {
+                int id = 0;
                 foreach (var progr in programs)
                 {
                     result.Add(new Program()
                     {
+                        Id = id.ToString(),
                         Title = progr.Title,
                         Year = progr.Year,
-                        ImdbId = Guid.NewGuid().ToString(),
-                        ImdbRating = ran.Next(10)
+                        ImdbId = id.ToString(),
+                        ImdbRating = ran.Next(10),
+                        OnDemandStarts = progr.OnDemandStarts,
+                        OnDemandEnds = progr.OnDemandEnds
                     });
+
+                    id++;
                 }
             });
 

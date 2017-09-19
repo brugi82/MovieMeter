@@ -25,10 +25,11 @@ namespace MovieMeter.Data.Model
         public ProgramType Type { get; set; }
         public bool Watched { get; set; }
         public double UserRating { get; set; }
+        public DateTime? OnDemandStarts { get; set; }
+        public DateTime? OnDemandEnds { get; set; }
 
         public string SourceId { get; set; }
         public virtual Source Source { get; set; }
-        public int UpdateId { get; set; }
         public virtual Update Update { get; set; }
 
         public virtual ICollection<ProgramUserData> ProgramUserData { get; set; }

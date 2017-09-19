@@ -25,6 +25,8 @@ namespace MovieMeter.Model
         public ProgramType Type { get; set; }
         public bool Watched { get; set; }
         public double UserRating { get; set; }
+        public DateTime? OnDemandStarts { get; set; }
+        public DateTime? OnDemandEnds { get; set; }
 
         public ProgramUserData ProgramUserData { get; set; }
     }

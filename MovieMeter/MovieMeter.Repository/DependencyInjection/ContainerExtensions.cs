@@ -24,9 +24,14 @@ namespace MovieMeter.Repository.DependencyInjection
         {
             var config = new MapperConfiguration(cfg => {
                 cfg.CreateMap<MovieMeter.Data.Model.Program, MovieMeter.Model.Program>();
+                cfg.CreateMap<MovieMeter.Model.Program, MovieMeter.Data.Model.Program>();
+                cfg.CreateMap<MovieMeter.Data.Model.Source, MovieMeter.Model.Source>();
+                cfg.CreateMap<MovieMeter.Model.Source, MovieMeter.Data.Model.Source>();
+                cfg.CreateMap<MovieMeter.Data.Model.Update, MovieMeter.Model.Update>();
+                cfg.CreateMap<MovieMeter.Model.Update, MovieMeter.Data.Model.Update>();
             });
 
-            var mapper = config.CreateMapper();
+            //var mapper = config.CreateMapper();
 
             container.RegisterSingleton<MapperConfiguration>(config);
             container.Register<IMapper>(() => config.CreateMapper(container.GetInstance));

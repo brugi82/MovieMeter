@@ -12,7 +12,14 @@ namespace MovieMeter.WebHarvester.Harvester
     {
         public static IWebPageLoader GetSeleniumLoader()
         {
-            return new SeleniumTMNLoader(new PhantomJSDriver());
+            try
+            {
+                return new SeleniumTMNLoader(new PhantomJSDriver());
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
         }
     }
 }

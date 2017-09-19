@@ -61,14 +61,38 @@ namespace MovieMeter.Repository.Repositories
                 if (programDbEntity == null)
                 {
                     programDbEntity = _mapper.Map<MovieMeter.Data.Model.Program>(program);
-                    _context.Programs.Add(programDbEntity);
+                    sourceDbEntity.Programs.Add(programDbEntity);
+                    //_context.Programs.Add(programDbEntity);
+                }
+                else
+                {
+                    programDbEntity.ImdbRating = program.ImdbRating;
+                    programDbEntity.ImdbVotes = program.ImdbVotes;
                 }
 
-                programDbEntity.Source = sourceDbEntity;
+                //programDbEntity.Source = sourceDbEntity;
                 programDbEntity.Update = updateDbEntity;
             }
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException ex)
+            {
+                // Retrieve the error messages as a list of strings.
+                var errorMessages = ex.EntityValidationErrors
+                        .SelectMany(x => x.ValidationErrors)
+                        .Select(x => x.ErrorMessage);
 
-            await _context.SaveChangesAsync();
+                // Join the list to a single string.
+                var fullErrorMessage = string.Join("; ", errorMessages);
+
+                // Combine the original exception message with the new one.
+                var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
+
+                // Throw a new DbEntityValidationException with the improved exception message.
+                throw new System.Data.Entity.Validation.DbEntityValidationException(exceptionMessage, ex.EntityValidationErrors);
+            }
         }
 
         public async Task<List<Program>> GetAllPrograms()
@@ -122,9 +146,9 @@ namespace MovieMeter.Repository.Repositories
             Source source = null;
             try
             {
-                var query = await _context.Sources.Where(elem => elem.Id == sourceId).SingleAsync();
+                source = await _context.Sources.Where(elem => elem.Id == sourceId).ProjectToSingleAsync<Source>(_mapper.ConfigurationProvider);
 
-                source = _mapper.Map<Source>(query);
+                //source = _mapper.Map<Source>(query);
             }
             catch(Exception ex)
             {

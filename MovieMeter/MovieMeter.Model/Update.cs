@@ -10,7 +10,7 @@ namespace MovieMeter.Model
     {
         public Update()
         {
-            //Id = Guid.NewGuid().ToString();
+            Id = Guid.NewGuid().ToString();
         }
 
         public Update(string id)

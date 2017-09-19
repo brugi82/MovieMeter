@@ -11,5 +11,7 @@ namespace MovieMeter.Model
         string Title { get; set; }
         int Year { get; set; }
         string Source { get; set; }
+        DateTime? OnDemandStarts { get; set; }
+        DateTime? OnDemandEnds { get; set; }
     }
 }

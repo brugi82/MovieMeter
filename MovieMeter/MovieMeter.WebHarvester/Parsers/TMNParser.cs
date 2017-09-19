@@ -19,6 +19,14 @@ namespace MovieMeter.WebHarvester.Parsers
 
             HtmlDocument document = new HtmlDocument();
             document.LoadHtml(htmlPage);
+            var program = GetBasicInfo(document);
+            GetOnDemandDates(document, program);
+
+            return program;
+        }
+
+        private static IProgramInfo GetBasicInfo(HtmlDocument document)
+        {
             var container = document.DocumentNode.Descendants().Where(node => node.GetAttributeValue("class", string.Empty).Equals("info-container"))
                                         .Single();
 
@@ -32,8 +40,25 @@ namespace MovieMeter.WebHarvester.Parsers
                 if (int.TryParse(detailsCollection[index], out year))
                     break;
             }
-
             return new ProgramInfo(name, year, Source);
+        }
+
+        private static void GetOnDemandDates(HtmlDocument document, IProgramInfo program)
+        {
+            try
+            {
+                var onDemand = document.DocumentNode.Descendants().Where(node => node.GetAttributeValue("class", string.Empty).Equals("on-demand")).Single();
+                var timeNodes = onDemand.Descendants().Where(node => node.Name == "time").ToList();
+                foreach (var timeNode in timeNodes)
+                    timeNode.Descendants().Where(node => node.Name == "span").First().Remove();
+
+                program.OnDemandStarts = Convert.ToDateTime(timeNodes[0].InnerText);
+                program.OnDemandEnds = Convert.ToDateTime(timeNodes[1].InnerText);
+            }
+            catch
+            {
+
+            }
         }
     }
 }

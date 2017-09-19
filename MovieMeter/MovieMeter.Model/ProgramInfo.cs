@@ -25,6 +25,8 @@ namespace MovieMeter.Model
         public int Year { get; set; }
 
         public string Source { get; set; }
+        public DateTime? OnDemandStarts { get; set; }
+        public DateTime? OnDemandEnds { get; set; }
 
         public override string ToString()
         {

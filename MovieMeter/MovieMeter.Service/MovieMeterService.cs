@@ -28,7 +28,10 @@ namespace MovieMeter.Service
         public async Task CreateUpdate(string sourceId)
         {
             var source = await Repository.GetSource(sourceId);
-            Update newUpdate = new Update();
+            Update newUpdate = new Update()
+            {
+                UpdatedOn = DateTime.Now
+            };
             var programs = await ProgramProvider.GetPrograms(source.ParserId);
             await Repository.AddUpdate(newUpdate, programs, sourceId);
             

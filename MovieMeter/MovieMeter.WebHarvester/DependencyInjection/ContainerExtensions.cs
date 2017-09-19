@@ -16,8 +16,8 @@ namespace MovieMeter.WebHarvester.DependencyInjection
         public static void RegisterHarvester(this Container container)
         {
             container.Register<IParser, TMNParser>();
-            container.Register<IHarvester, MockHarvester>();
-            container.Register<IRatingProvider, MockRatingProvider>();
+            container.Register<IHarvester, Harvester.Harvester>();
+            container.Register<IRatingProvider, OmdbRatingProvider>();
             container.Register<IProgramProvider, ProgramProvider>();
         }
     }
