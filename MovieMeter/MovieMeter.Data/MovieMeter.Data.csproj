@@ -67,6 +67,10 @@
     <Compile Include="Migrations\201709151951119_removed_double_id.Designer.cs">
       <DependentUpon>201709151951119_removed_double_id.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710020330470_Removed_UserData_From_Model.cs" />
+    <Compile Include="Migrations\201710020330470_Removed_UserData_From_Model.Designer.cs">
+      <DependentUpon>201710020330470_Removed_UserData_From_Model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Program.cs" />
     <Compile Include="Model\ProgramType.cs" />
@@ -89,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709151951119_removed_double_id.resx">
       <DependentUpon>201709151951119_removed_double_id.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710020330470_Removed_UserData_From_Model.resx">
+      <DependentUpon>201710020330470_Removed_UserData_From_Model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

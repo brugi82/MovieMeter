@@ -23,8 +23,6 @@ namespace MovieMeter.Model
         public string ImdbVotes { get; set; }
         public string Poster { get; set; }
         public ProgramType Type { get; set; }
-        public bool Watched { get; set; }
-        public double UserRating { get; set; }
         public DateTime? OnDemandStarts { get; set; }
         public DateTime? OnDemandEnds { get; set; }
 

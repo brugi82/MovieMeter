@@ -60,6 +60,7 @@ namespace MovieMeter.Repository.Repositories
                 var programDbEntity = await _context.Programs.FirstOrDefaultAsync(elem => elem.ImdbId == program.ImdbId);
                 if (programDbEntity == null)
                 {
+                    program.Id = Guid.NewGuid().ToString();
                     programDbEntity = _mapper.Map<MovieMeter.Data.Model.Program>(program);
                     sourceDbEntity.Programs.Add(programDbEntity);
                     //_context.Programs.Add(programDbEntity);
@@ -176,8 +177,6 @@ namespace MovieMeter.Repository.Repositories
 
             programData.ImdbRating = program.ImdbRating;
             programData.ImdbVotes = program.ImdbVotes;
-            programData.Watched = program.Watched;
-            programData.UserRating = program.UserRating;
         }
     }
 }
