@@ -73,7 +73,6 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Program.cs" />
-    <Compile Include="Model\ProgramType.cs" />
     <Compile Include="Model\ProgramUserData.cs" />
     <Compile Include="Model\Source.cs" />
     <Compile Include="Model\Update.cs" />
@@ -97,6 +96,12 @@
     <EmbeddedResource Include="Migrations\201710020330470_Removed_UserData_From_Model.resx">
       <DependentUpon>201710020330470_Removed_UserData_From_Model.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovieMeter.Model\MovieMeter.Model.csproj">
+      <Project>{F5C9BA07-851A-44CE-AE2C-7723272D6EBE}</Project>
+      <Name>MovieMeter.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -19,6 +19,7 @@ namespace MovieMeter.Repository.Contracts
         Task<Program> AddOrUpdateProgram(Program program);
         Task UpdateProgram(Program program);
         Task<Program> GetProgram(string programId);
+        Task<int> GetActiveProgramCount();
 
         Task AddOrUpdateProgramUserData(ProgramUserData programUserData);
         Task AddUpdate(Update update, List<Program> programs, string sourceId);

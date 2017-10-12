@@ -37,6 +37,12 @@ namespace MovieMeter.Service
             
         }
 
+        public async Task<int> GetActiveProgramCount()
+        {
+            var count = await Repository.GetActiveProgramCount();
+            return count;
+        }
+
         public async Task<List<Program>> GetAllPrograms(ProgramQuery query)
         {
             throw new NotImplementedException();
@@ -57,9 +63,9 @@ namespace MovieMeter.Service
             return await Repository.GetLatestUpdateForSource(sourceId);
         }
 
-        public Task<Program> GetProgram(string programId)
+        public async Task<Program> GetProgram(string programId)
         {
-            throw new NotImplementedException();
+            return await Repository.GetProgram(programId);
         }
 
         public async Task<Source> GetSource(string sourceId)

@@ -20,6 +20,20 @@ namespace MovieMeter.API.Controllers
         }
 
         [HttpGet]
+        public async Task<IHttpActionResult> Get()
+        {
+            try
+            {
+                throw new Exception();
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
+        }
+
+        [HttpGet]
         public async Task<IHttpActionResult> Get([FromUri]ProgramQuery query)
         {
             try

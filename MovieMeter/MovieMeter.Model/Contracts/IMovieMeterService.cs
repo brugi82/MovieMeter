@@ -16,6 +16,7 @@ namespace MovieMeter.Model.Contracts
         Task<Source> GetSource(string sourceId);
         Task<Program> GetProgram(string programId);
         Task UpdateProgram(Program program);
+        Task<int> GetActiveProgramCount();
 
         Task CreateUpdate(string sourceId);
     }

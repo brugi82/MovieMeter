@@ -29,6 +29,10 @@ namespace MovieMeter.Repository.DependencyInjection
                 cfg.CreateMap<MovieMeter.Model.Source, MovieMeter.Data.Model.Source>();
                 cfg.CreateMap<MovieMeter.Data.Model.Update, MovieMeter.Model.Update>();
                 cfg.CreateMap<MovieMeter.Model.Update, MovieMeter.Data.Model.Update>();
+                //cfg.CreateMap<MovieMeter.Data.Model.ProgramType, MovieMeter.Model.ProgramType>();
+                //cfg.CreateMap<MovieMeter.Model.ProgramType, MovieMeter.Data.Model.ProgramType>();
+                cfg.CreateMap<MovieMeter.Data.Model.ProgramUserData, MovieMeter.Model.ProgramUserData>();
+                cfg.CreateMap<MovieMeter.Model.ProgramUserData, MovieMeter.Data.Model.ProgramUserData>();
             });
 
             //var mapper = config.CreateMapper();

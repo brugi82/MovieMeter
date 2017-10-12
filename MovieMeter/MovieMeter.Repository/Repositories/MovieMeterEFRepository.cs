@@ -136,10 +136,33 @@ namespace MovieMeter.Repository.Repositories
 
         public async Task<Program> GetProgram(string programId)
         {
-            var programData = await _context.Programs.FirstAsync(elem => elem.Id == programId);
-            var program = _mapper.Map<Program>(programData);
+                var userId = Guid.Empty.ToString();
 
-            return program;
+                var program = await _context.Programs.Select(prog => new {
+                    Program = prog,
+                    ProgramUserData = prog.ProgramUserData.Where(elem => elem.UserId == userId)
+                })
+                .Where(elem => elem.Program.ImdbId == programId)
+                .Select(x => x.Program)
+                .ProjectToSingleAsync<Program>(_mapper.ConfigurationProvider);
+
+                return program;
+        }
+
+        public async Task<int> GetActiveProgramCount()
+        {
+            var sources = await _context.Sources.ToListAsync();
+            var updates = new List<string>();
+            foreach (var source in sources)
+            {
+                var update = await _context.Updates.Where(elem => elem.SourceId == source.Id).OrderByDescending(elem => elem.UpdatedOn).FirstOrDefaultAsync();
+                if (update != null)
+                    updates.Add(update.Id);
+            }
+
+            var count = await _context.Programs.Where(elem => !string.IsNullOrEmpty(elem.ImdbId) && updates.Contains(elem.Update.Id)).CountAsync();
+
+            return count;
         }
 
         public async Task<Source> GetSource(string sourceId)

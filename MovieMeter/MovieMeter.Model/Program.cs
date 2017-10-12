@@ -26,6 +26,6 @@ namespace MovieMeter.Model
         public DateTime? OnDemandStarts { get; set; }
         public DateTime? OnDemandEnds { get; set; }
 
-        public ProgramUserData ProgramUserData { get; set; }
+        public List<ProgramUserData> ProgramUserData { get; set; }
     }
 }
