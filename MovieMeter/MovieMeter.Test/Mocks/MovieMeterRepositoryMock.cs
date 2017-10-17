@@ -89,6 +89,11 @@ namespace MovieMeter.Test.Mocks
             throw new NotImplementedException();
         }
 
+        public Task<int> GetActiveProgramCount()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Program> MockRepository
         {
             get

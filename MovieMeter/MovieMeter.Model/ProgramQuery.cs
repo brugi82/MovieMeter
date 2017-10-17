@@ -8,8 +8,8 @@ namespace MovieMeter.Model
 {
     public class ProgramQuery
     {
-        public int? MinRating { get; set; }
-        public int? MaxRating { get; set; }
+        public double? MinRating { get; set; }
+        public double? MaxRating { get; set; }
         public string Genre { get; set; }
         public int? Year { get; set; }
         public string Actor { get; set; }

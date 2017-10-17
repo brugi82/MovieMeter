@@ -6,10 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace MovieMeter.API.Controllers
 {
     [Route("api/v1/Programs")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ProgramsController : ApiController
     {
         private IMovieMeterService _service;
@@ -33,20 +35,8 @@ namespace MovieMeter.API.Controllers
             }
         }
 
-        [HttpGet]
-        public async Task<IHttpActionResult> Get([FromUri]ProgramQuery query)
-        {
-            try
-            {
-                var result = await _service.GetAllPrograms(query);
-                return Ok(result);
-            }
-            catch (Exception)
-            {
-                return InternalServerError();
-            }
-        }
-
+        
+        [Route("{programId}")]
         [HttpGet]
         public async Task<IHttpActionResult> Get(string programId)
         {

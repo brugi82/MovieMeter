@@ -18,6 +18,7 @@ namespace MovieMeter.API.DependencyInjection
             container.Register<ProgramsController>();
             container.Register<UpdatesController>();
             container.Register<ProgramsCountController>();
+            container.Register<ProgramsSearchController>();
         }
     }
 }
