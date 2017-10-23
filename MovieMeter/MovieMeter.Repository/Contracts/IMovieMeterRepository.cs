@@ -9,7 +9,7 @@ namespace MovieMeter.Repository.Contracts
 {
     public interface IMovieMeterRepository
     {
-        Task<List<Program>> GetAllPrograms(ProgramQuery query);
+        Task<List<Program>> GetAllPrograms(ProgramQuery query, int count);
         Task<List<Update>> GetAllUpdates();
         Task<List<Update>> GetUpdatesForSource(string sourceId);
         Task<Update> GetLatestUpdateForSource(string sourceId);

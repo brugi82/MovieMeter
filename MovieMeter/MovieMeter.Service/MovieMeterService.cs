@@ -43,9 +43,10 @@ namespace MovieMeter.Service
             return count;
         }
 
-        public async Task<List<Program>> GetAllPrograms(ProgramQuery query)
+        public async Task<List<Program>> GetAllPrograms(ProgramQuery query, int count)
         {
-            throw new NotImplementedException();
+            var programs = await Repository.GetAllPrograms(query, count);
+            return programs;
         }
 
         public async Task<List<Source>> GetAllSources()

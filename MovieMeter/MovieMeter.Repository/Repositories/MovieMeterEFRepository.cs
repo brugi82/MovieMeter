@@ -10,6 +10,7 @@ using AutoMapper;
 using System.Data.Entity;
 using MovieMeter.WebHarvester.Harvester;
 using MovieMeter.WebHarvester.Parsers;
+using System.Linq.Expressions;
 
 namespace MovieMeter.Repository.Repositories
 {
@@ -17,6 +18,7 @@ namespace MovieMeter.Repository.Repositories
     {
         private MovieMeterContext _context;
         private IMapper _mapper;
+        private const string VotesSeparator = ",";
 
         public MovieMeterEFRepository(MovieMeterContext context, IMapper mapper)
         {
@@ -104,9 +106,33 @@ namespace MovieMeter.Repository.Repositories
             return programs;
         }
 
-        public Task<List<Program>> GetAllPrograms(ProgramQuery query)
+        public async Task<List<Program>> GetAllPrograms(ProgramQuery query, int count)
         {
-            throw new NotImplementedException();
+            var programs = new List<Program>();
+            var updates = await GetLatestUpdates();
+            try
+            {
+                programs = await _context.Programs.Where(elem => updates.Contains(elem.Update.Id) &&
+                                    (!string.IsNullOrEmpty(query.Actor) ? elem.Actors.Contains(query.Actor) : true) &&
+                                    (!string.IsNullOrEmpty(query.Director) ? elem.Director.Contains(query.Director) : true) &&
+                                    (!string.IsNullOrEmpty(query.Genre) ? elem.Genre.Contains(query.Genre) : true) &&
+                                    (!string.IsNullOrEmpty(query.Language) ? elem.Language.Contains(query.Language) : true) &&
+                                    (query.MinRating.HasValue ? elem.ImdbRating >= query.MinRating : true) &&
+                                    (query.MaxRating.HasValue ? elem.ImdbRating <= query.MaxRating : true) &&
+                                    (query.Year.HasValue ? elem.Year >= query.Year : true))
+                                    .OrderByDescending(elem => elem.ImdbRating)
+                                    .ProjectToListAsync<Program>(_mapper.ConfigurationProvider);
+
+                programs = programs.Where(elem => query.MinVotes.HasValue ? ConvertToNumber(elem.ImdbVotes, VotesSeparator) >= query.MinVotes : true)
+                    .Take(count)
+                    .ToList();
+            }
+            catch
+            {
+
+            }
+
+            return programs;
         }
 
         public async Task<List<Source>> GetAllSources()
@@ -151,6 +177,15 @@ namespace MovieMeter.Repository.Repositories
 
         public async Task<int> GetActiveProgramCount()
         {
+            List<string> updates = await GetLatestUpdates();
+
+            var count = await _context.Programs.Where(elem => !string.IsNullOrEmpty(elem.ImdbId) && updates.Contains(elem.Update.Id)).CountAsync();
+
+            return count;
+        }
+
+        private async Task<List<string>> GetLatestUpdates()
+        {
             var sources = await _context.Sources.ToListAsync();
             var updates = new List<string>();
             foreach (var source in sources)
@@ -160,9 +195,7 @@ namespace MovieMeter.Repository.Repositories
                     updates.Add(update.Id);
             }
 
-            var count = await _context.Programs.Where(elem => !string.IsNullOrEmpty(elem.ImdbId) && updates.Contains(elem.Update.Id)).CountAsync();
-
-            return count;
+            return updates;
         }
 
         public async Task<Source> GetSource(string sourceId)
@@ -200,6 +233,18 @@ namespace MovieMeter.Repository.Repositories
 
             programData.ImdbRating = program.ImdbRating;
             programData.ImdbVotes = program.ImdbVotes;
+        }
+
+        private uint ConvertToNumber(string value, string separator)
+        {
+            uint result = 0;
+            if (string.IsNullOrEmpty(value) == false)
+            {
+                var baseValue = value.Replace(separator, string.Empty);
+                UInt32.TryParse(baseValue, out result);
+            }
+
+            return result;
         }
     }
 }

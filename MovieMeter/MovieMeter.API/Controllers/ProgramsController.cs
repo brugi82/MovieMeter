@@ -36,13 +36,12 @@ namespace MovieMeter.API.Controllers
         }
 
         
-        [Route("{programId}")]
         [HttpGet]
-        public async Task<IHttpActionResult> Get(string programId)
+        public async Task<IHttpActionResult> Get(string id)
         {
             try
             {
-                var result = await _service.GetProgram(programId);
+                var result = await _service.GetProgram(id);
                 return Ok(result);
             }
             catch (Exception)

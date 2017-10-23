@@ -63,7 +63,7 @@ namespace MovieMeter.Test
             var query = new ProgramQuery();
             var service = new MovieMeterService(_repository, _programProvider);
 
-            var programs = await service.GetAllPrograms(query);
+            var programs = await service.GetAllPrograms(query, 25);
 
             Assert.IsTrue(_repository.GetAllProgramsCalled);
         }

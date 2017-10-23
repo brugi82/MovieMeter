@@ -54,7 +54,7 @@ namespace MovieMeter.Test.Mocks
             return Task.Run(() => new Source());
         }
 
-        public Task<List<Program>> GetAllPrograms(ProgramQuery query)
+        public Task<List<Program>> GetAllPrograms(ProgramQuery query, int count)
         {
             throw new NotImplementedException();
         }

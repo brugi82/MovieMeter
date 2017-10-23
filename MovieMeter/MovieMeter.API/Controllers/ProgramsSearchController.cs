@@ -22,11 +22,11 @@ namespace MovieMeter.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IHttpActionResult> Get([FromBody]ProgramQuery query)
+        public async Task<IHttpActionResult> Get([FromBody]ProgramQuery query, int count = 25)
         {
             try
             {
-                var result = await _service.GetAllPrograms(query);
+                var result = await _service.GetAllPrograms(query, count);
                 return Ok(result);
             }
             catch (Exception)

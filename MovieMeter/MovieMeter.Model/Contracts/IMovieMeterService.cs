@@ -8,7 +8,7 @@ namespace MovieMeter.Model.Contracts
 {
     public interface IMovieMeterService
     {
-        Task<List<Program>> GetAllPrograms(ProgramQuery query);
+        Task<List<Program>> GetAllPrograms(ProgramQuery query, int count);
         Task<List<Update>> GetAllUpdates();
         Task<List<Update>> GetUpdatesForSource(string sourceId);
         Task<Update> GetLatestUpdateForSource(string sourceId);
